@@ -1,7 +1,7 @@
 # static-php-cli
 Compile A Statically Linked PHP With Swoole and other Extensions. [English README](README-en.md)
 
-> 我没有思绪了，最近有点懒，过节后再提更新和重构的事情。
+**如果你对本项目有兴趣，请看讨论进行投票：<https://github.com/crazywhalecc/static-php-cli/discussions/29>**
 
 编译纯静态的 PHP Binary 二进制文件，带有各种扩展，让 PHP-cli 应用变得更便携！
 
@@ -61,8 +61,10 @@ cat micro.sfx code.php > single-app && chmod +x single-app
 可以自己使用 Dockerfile 进行编译构建：
 
 ```bash
+
 git clone https://github.com/crazywhalecc/static-php-cli.git
 cd static-php-cli/docker
+export DOCKER_BUILDKIT=1
 docker build -t static-php . --build-arg USE_BACKUP_ADDRESS=no
 # 新建一个用于放置构建好的二进制的文件夹
 mkdir dist
